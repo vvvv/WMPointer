@@ -1,54 +1,14 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
   <PropertyGroup>
-    <ProjectGuid>{0B25767A-CF4E-48E6-B89C-AF1A93B1B0CE}</ProjectGuid>
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <OutputType>Library</OutputType>
-    <RootNamespace>WMPointer</RootNamespace>
-    <AssemblyName>WMPointer</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
-    <OutputPath>bin\$(Platform)\$(Configuration)\</OutputPath>
-    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
-    <TargetFrameworkProfile />
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Version>0.0.1-alpha</Version>
+    <Authors>Woeishi Lean, Andrey Dryazgov</Authors>
+    <Company></Company>
+    <RepositoryUrl>https://github.com/vvvv/WMPointer</RepositoryUrl>
+    <PackageTags>touch, multitouch, gesture, pen, interactioncontext</PackageTags>
+    <Description>A .NET wrapper around Gesture, Pointer, Touch and Pen related Win32 API's.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <Optimize>False</Optimize>
-    <CheckForOverflowUnderflow>True</CheckForOverflowUnderflow>
-    <DebugType>Full</DebugType>
-    <DebugSymbols>True</DebugSymbols>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>True</Optimize>
-    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
-    <DebugType>None</DebugType>
-    <DebugSymbols>False</DebugSymbols>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Platform)' == 'x86' ">
-    <PlatformTarget>x86</PlatformTarget>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(Platform)' == 'x64' ">
-    <PlatformTarget>x64</PlatformTarget>
-  </PropertyGroup>
-  <ItemGroup>
-    <Reference Include="System" />
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Interactable.cs" />
-    <Compile Include="InteractionConfiguration.cs" />
-    <Compile Include="InteractionContext.cs" />
-    <Compile Include="PenInfo.cs" />
-    <Compile Include="PointerInfo.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TouchHitTest.cs" />
-    <Compile Include="TouchInfo.cs" />
-    <Compile Include="TouchInjection.cs" />
-    <Compile Include="WMPointer.cs" />
-  </ItemGroup>
-  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.Targets" />
+
 </Project>
