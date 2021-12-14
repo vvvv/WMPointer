@@ -32,6 +32,7 @@ namespace WMPointer.InteractionContext
         Win32.INTERACTION_CONTEXT_OUTPUT_CALLBACK callback;
         INTERACTION_CONTEXT_OUTPUT output;
         InertiaParameters inertiaParams = new InertiaParameters();
+        public bool IsTouched => pointers.Count > 0;
         public bool IsActive { get; private set; }
         public bool IsInertia { get; private set; }
 
